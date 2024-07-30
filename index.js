@@ -26,7 +26,6 @@ app.use(express.json());
 // MongoDB Conection Method
 const uri = `mongodb+srv://${process.env.ENV_READYPAY_USER}:${process.env.ENV_READYPAY_PASSWORD}@cluster0.6e55rfm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
@@ -34,6 +33,9 @@ const client = new MongoClient(uri, {
         deprecationErrors: true,
     }
 });
+
+
+
 
 
 async function run() {
